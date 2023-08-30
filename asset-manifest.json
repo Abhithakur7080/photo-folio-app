@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/photo-folio-app/static/css/main.d1556f40.css",
+    "main.js": "/photo-folio-app/static/js/main.26c6f4ba.js",
+    "static/media/logo.png": "/photo-folio-app/static/media/logo.7f2906692629e8629a34.png",
+    "index.html": "/photo-folio-app/index.html",
+    "main.d1556f40.css.map": "/photo-folio-app/static/css/main.d1556f40.css.map",
+    "main.26c6f4ba.js.map": "/photo-folio-app/static/js/main.26c6f4ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1556f40.css",
+    "static/js/main.26c6f4ba.js"
+  ]
+}
