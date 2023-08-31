@@ -4,6 +4,10 @@ import { db } from "../../firebaseinit";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import editbtn from "./edit.png";
+import deletebtn from "./delete.png";
+import backbtn from "./back.png";
+
 import {
     collection,
     addDoc,
@@ -129,7 +133,7 @@ const ImageList = ({ albumId, onBackClick }) => {
                 )}
                 <div className={styles.top}>
                     <img
-                        src="https://cdn-icons-png.flaticon.com/128/2099/2099238.png"
+                        src={backbtn}
                         alt="back.png"
                         className="back"
                         onClick={onBackClick}
@@ -150,13 +154,13 @@ const ImageList = ({ albumId, onBackClick }) => {
                                 key={image.id}>
                                 <div>
                                     <img
-                                        src="https://cdn-icons-png.flaticon.com/128/1828/1828911.png"
+                                        src={editbtn}
                                         alt="edit.png"
                                         className={styles.edit}
                                         onClick={() => handleEditImage(image)}
                                     />
                                     <img
-                                        src="https://cdn-icons-png.flaticon.com/128/1214/1214428.png"
+                                        src={deletebtn}
                                         alt="delete.png"
                                         className={styles.delete}
                                         onClick={() => handleDeleteImage(image.id)}

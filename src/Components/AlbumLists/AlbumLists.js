@@ -3,6 +3,8 @@ import styles from './AlbumLists.module.css';
 import AlbumForm from "../AlbumForm/AlbumForm";
 import { db } from "../../firebaseinit";
 import ImageList from "../ImageList/ImageList";
+import albumimg from "./album.png";
+import deletebtn from "./delete.png";
 import {
     collection,
     addDoc,
@@ -81,12 +83,12 @@ const AlbumLists = () => {
                         key={album.id}
                         >
                             <img
-                                src="https://cdn-icons-png.flaticon.com/128/1214/1214428.png"
+                                src={deletebtn}
                                 alt="delete"
                                 className={styles.delete}
                                 onClick={() => handleAlbumRemove(album.id)}
                             />
-                            <img src="https://cdn-icons-png.flaticon.com/128/2659/2659360.png" alt="album"
+                            <img src={albumimg} alt="album"
                             className={styles.icon}
                             onClick={() => handleAlbumClick(album.id)}/>
                             <span>{album.name}</span>
