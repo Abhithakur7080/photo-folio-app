@@ -72,14 +72,14 @@ const ImageList = ({ albumId, onBackClick }) => {
 
     const handleEditImage = (image) => {
         setTitle(image.title);
-        setImageUrl(image.url);
+        setImageUrl(image.imageUrl);
         setEditImageId(image.id);
         setShowForm(true);
     }
 
     useEffect(() => {
-        const unsubscribe = onSnapshot(collection(db, 'images'), (queruSnapshot) => {
-            const imageData = queruSnapshot.docs.filter((doc) =>
+        const unsubscribe = onSnapshot(collection(db, 'images'), (querySnapshot) => {
+            const imageData = querySnapshot.docs.filter((doc) =>
                 doc.data()
                     .albumId === albumId)
                 .map((doc) => ({
